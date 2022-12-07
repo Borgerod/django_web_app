@@ -1,0 +1,5 @@
+pipenv
+django
+django-tailwind
+wagtail
+# requests
