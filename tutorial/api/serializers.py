@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import Item, Location
+from .models import Item, Location
 
 '''
 will turn the db models into json that we can work with
