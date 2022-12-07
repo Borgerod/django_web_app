@@ -1,6 +1,8 @@
 # Description:
 For this demonstration I will copy the homepage of the website: https://bolig.skanska.no/
 
+Note to self:  
+I should have name a branch instead..
 
 
 ## todo
