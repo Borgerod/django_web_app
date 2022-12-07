@@ -61,7 +61,7 @@ Location:
 	
 Item:
 
-	itenLocation = models.ForeignKey(Location, on_delete=models.CASCADE)
+	itemLocation = models.ForeignKey(Location, on_delete=models.CASCADE)
 	'''
 		- link/send back to the first model (Location),   "..gnKey(Location, .."  
 		- "on_delete=models.CASCADE" will make sure that when location is deleted,   
@@ -69,7 +69,7 @@ Item:
 	'''  
 - itemName: Name of the item
 - date_added: when the item was added, with automatic now 
-- itenLocation: is a link betweeen Item and Location  
+- itemLocation: is a link betweeen Item and Location  
 
 	
 ### Step 2 - Admin 
