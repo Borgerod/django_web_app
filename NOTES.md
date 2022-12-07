@@ -146,7 +146,7 @@ OUTPUT:
 
 	System check identified no issues (0 silenced).
 	December 07, 2022 - 13:45:12
-	Django version 4.1, using settings 'tutorial_app.settings'
+	Django version 4.1, using settings 'demo_app.settings'
 	Starting development server at http://127.0.0.1:8000/
 	Quit the server with CTRL-BREAK.
 
@@ -209,5 +209,5 @@ C:\Users\Big Daddy B\AppData\Local\Programs\Python\Python310\Scripts\pip3.exe
 commands to make tutorial app:
 	mkdir tutorial
 	cd tutorial
-	django-admin startproject tutorial_app .
+	django-admin startproject demo_app .
 	django-admin startapp api
