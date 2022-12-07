@@ -7,27 +7,39 @@ from .models import Item, Location
 from .serializers import ItemSerializer, LocationSerializer
 
 
+''' Descr. of "get_queryset()":
 
+
+"location" in "queryset = queryset.filter(itemLocation=location)";
+    => "location" is the information that is going to get passed 
+        via the query parameter in the url.  
+
+    we're going to filter the itemLocation field from api.models.Item
+'''
+
+
+# TODO [ ] make choice (Original, Test)
+
+#* Original; ItemList 
 class ItemList(generics.ListCreateAPIView):
     serializer_class = ItemSerializer
 
     def get_queryset(self):
-        return super().get_queryset()
+        queryset = Item.objects.all()
+        location = self.request.query_params.get('location')
+        if location is not None:
+            queryset = queryset.filter(itemLocation=location)
+        return queryset
 
-class ItemDetail(generics.ListCreateAPIView):
+class ItemDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ItemSerializer
-
-    def get_queryset(self):
-        return super().get_queryset()
+    queryset = Item.objects.all()
 
 class LocationList(generics.ListCreateAPIView):
     serializer_class = LocationSerializer
-
-    def get_queryset(self):
-        return super().get_queryset()
-
-class LocationDetail(generics.ListCreateAPIView):
+    queryset = Location.objects.all()
+    
+class LocationDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = LocationSerializer
-
-    def get_queryset(self):
-        return super().get_queryset()
+    queryset = Location.objects.all()
+    
