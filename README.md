@@ -39,7 +39,7 @@ Other tools:
   
 Funbit Referances:
 - https://sigmabil.no
-- https://boligskanska.no
+- https://bolig.skanska.no/
 - https://vps.funbit.dev (404)
 
 <br>
