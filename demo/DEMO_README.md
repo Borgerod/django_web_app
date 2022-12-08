@@ -6,6 +6,8 @@ I should have name a branch instead..
 
 
 ## todo
+-  [ ] Learn about and integrate Wagtail
+-  [ ] Learn about and integrate Tailwind
 -  [ ] learn about how pages and components work on django.
 -  [ ] find demo photos
 -  [ ] make theme-states / settings
@@ -20,7 +22,6 @@ I should have name a branch instead..
 
 #### product_List
 -  [ ] make model for demo products 
--  [ ] display list_items
 -  [ ] add slide animation for list_items
 -  [ ] add slideshow buttons
 -  [ ] add product-buttons
