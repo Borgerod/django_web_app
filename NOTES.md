@@ -1,3 +1,10 @@
+## What are the tools? 
+- Django 	:	Framework
+- Tailwind	:	CMS, Control who can do what. Control how content is organised and displayed. 
+- Wagtail	:	Huge collection of cs utility classes
+- https://play.tailwindcss.com/ 	: 	
+
+
 ## Getting Started
 
 ### Step 0
