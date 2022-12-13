@@ -1,16 +1,22 @@
-<!-- {% load static tailwind_tags %}
-{% tailwind_css %}
-{% tailwind_css %} -->
-
+<!-- <!DOCTYPE html>
 <html lang="en">
 	<head>
-    <title>Django Tailwind</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	</head>
+		
+		{% load static tailwind_tags %}
+		<title>Django Tailwind</title>
+		{% tailwind_css %}
+		{% include "src\html\desgin.html" %}
+		
+		</head>
 
-	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+	<body class="bg-black font-serif leading-normal tracking-normal">
+		{% block content %}
+
+		  
+
 		<button class="addButton"> + </button>
 		<div class="container mx-auto">
 			<section class="flex items-center justify-center h-screen">
@@ -19,6 +25,17 @@
 		</div>
 		<button class="addButton"> + </button>
 		<button class="p-3 w-10 rounded-xl text-white bg-cyan-500 hover:bg-cyan-600"> + </button>
+		
+		{% endblock %}
+
 	</body>
 	<script src="https://cdn.tailwindcss.com"></script> 
-</html>
+</html> -->
+
+<div class="ScaffoldWrapper">
+	<div class="SkewedCardContainer">
+	  <div class="card_background_skewed">
+		<div class="card_base">HEI</div>
+	  </div>
+	</div>
+  </div>

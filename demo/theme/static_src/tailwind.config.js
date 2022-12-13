@@ -44,7 +44,26 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            animation: {
+                'spin-slow': 'spin 3s linear infinite',
+                'spin-fast': 'spin 1s linear infinite',
+              }
+        },
+        rotate:{
+            '-1':'-1deg',
+            '-2':'-2deg',
+            '-3':'-3deg',
+            '-4':'-4deg',
+            '-5':'-5deg',
+            '-6':'-6deg',
+            '-7':'-7deg',
+            '-8':'-8deg',
+            '-9':'-9deg',
+            '-10':'-10deg',
+            '-15':'-15deg',
+            '-20':'-20deg',
+        },
     },
     plugins: [
         /**
