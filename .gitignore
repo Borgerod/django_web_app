@@ -3,8 +3,10 @@ db.sqllite3
 ssh_key
 tailwind_tutorial
 wagtail_tutorial
-ssh_key
-
+Setting_up_tailwind_with_django
+tailwind_CSS_crash_course
+tailwind_tutorial_django_chat_app
+venv
 
 # TEMOPRARLY
 demo/src/css/home_page.css
