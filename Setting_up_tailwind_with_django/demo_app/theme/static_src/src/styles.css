@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.background{
+    @apply bg-black;
+}
+
+
+
+.bodytext{
+    @apply text-center text-xl text-white;
+}
+.headertext{
+    @apply w-1/5  mx-auto p-2 text-5xl text-left text-white;
+}
+.headertext2{
+    @apply my-16 text-left text-7xl text-white;
+}
+.appBar{
+    @apply flex  py-2 my-5 items-center;
+}
+
+.navBar{
+    @apply inline-flex w-4/5 p-5  mx-auto  justify-end space-x-12 text-white;
+}
+
+.backgroundMargin {
+    @apply bg-black px-40;
+}
+
+.roundButton{
+    /* @apply flex text-white hover:-rotate-45; */
+    @apply flex rounded-md object-cover duration-500 ease-in-out hover:-rotate-45";
+}
+.buttonIcon{
+    @apply h-10 w-10 p-2 border-2 rounded-full hover:border-gray-400;
+}

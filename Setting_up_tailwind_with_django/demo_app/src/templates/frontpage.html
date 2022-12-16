@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+{% load static tailwind_tags %}
+
+<!-- 
+	TODO 
+	
+	- [ ] animation for button hover
+	- [ ] animation for menu hover
+	- [ ] transform menu into icon if window-width == x
+	- [ ] resize Logo and "finn ditt.." by windows-size
+	- [ ] make body margin % 
+	- [ ] make background slideshow
+	
+	NOTE
+-->
+
+{% block content %}
+<body class="background">
+
+	<!-- TEST NAVBAR -->
+	<!-- <nav class="p-3 border-gray-200 rounded bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+		<div class="container flex flex-wrap items-center justify-between mx-auto">
+
+		  <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" aria-expanded="false">
+			<span class="sr-only">Open main menu</span>
+			<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+		  </button>
+		  <div class="hidden w-full" id="navbar-hamburger">
+		  </div>
+	</nav>		 -->
+
+	<nav class="p-3  rounded bg-gray-800 dark:bg-gray-800 dark:border-gray-700 shadow">
+		<div class=" flex  items-center justify-between">
+			
+			<!-- LOGO -->
+			<span class="">
+				<a class="inline w-auto lg:block text-2xl md:text-4xl text-left text-white" href="/">SKANSKA</a>
+			</span>
+			
+			<!-- MENU ICON -->
+			<span class="text-3xl text-white cursor-pointer md:hidden block">
+				<ion-icon  name="menu-sharp" onclick="Menu(this)"> </ion-icon>
+			</span>
+			
+			<ul class=" 
+			grid justify-items-stretch
+			bg-white 
+			md:w-2/3 w-2/3
+			md:py-0 py-4 
+			md:opacity-100 opacity-0
+			md:static absolute
+			">
+				<div class="mx-8 my-2 justify-self-end">HERE</div>
+				<div class="mx-8 my-2 justify-self-end">HERE</div>
+				<div class="mx-8 my-2 justify-self-end">HERE</div>
+			</ul>
+
+			<!-- <ul class=" bg-white 
+			md:flex md:items-center 
+			md:z-auto z-[-1] 
+			w-full md:w-auto left-0 
+			md:py-0 py-4 md:pl-0 pl-7 
+			md:opacity-100 opacity-0
+			md:static absolute 
+			top-[400px] 
+			"> -->
+			
+			<!-- MENU LIST -->
+			<!-- <ul class=" bg-white 
+			md:flex md:items-center 
+			md:z-auto z-[-1] 
+			md:w-auto left-0 
+			md:py-0 py-4 md:pl-0 pl-7 
+			md:opacity-100 opacity-0
+			md:static absolute 
+			top-[400px] 
+			">
+				<li class="text-black md:text-white mx-4 my-6 md:my-0"> item 1 </li>
+				<li class="text-black md:text-white mx-4 my-6 md:my-0"> item 2 </li>
+				<li class="text-black md:text-white mx-4 my-6 md:my-0"> item 3 </li>
+				<li class="text-black md:text-white mx-4 my-6 md:my-0"> item 4 </li>
+			</ul> -->
+			<!-- <ul class="grid justify-items-stretch ">  -->
+
+			<!-- </ul> -->
+		</div>
+	</nav>
+	
+	
+	<script>
+		// function Menu(e){
+		// 	let list = document.querySelector('ul');
+		// 	e.name === 'menu' ? (e.name = "close", list.classList.
+		// 	add('top-[80px]') , list.classList.add('opacity-100')) 
+		// 	: (e.name = "menu", list.classList.remove('top-[80px]')
+		// 	, list.classList.remove('opacity-100'))
+		// }
+		function Menu(e){
+			let list = document.querySelector('ul');
+			e.name === 'menu' ? (e.name = "close", list.classList.
+			add('top-[80px]') , list.classList.add('opacity-100')) 
+			: (e.name = "menu", list.classList.remove('top-[80px]')
+			, list.classList.remove('opacity-100'))
+		}
+	</script>
+
+
+	<!-- BODY: FRONT PAGE -->
+
+
+	<div class="h-100 w-180 py-80 mx-40 "> 
+		<div class="space-y-10" href="http://skanska_copy/prosjekter">    
+		  <a class="headertext2" >
+			Finn ditt  <br>
+			nye hjem
+		  </a>
+			<button class="roundButton"> 
+			  <svg class="buttonIcon" xmlns="http://www.w3.org/2000/svg" fill="none" color="white" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+				<path stroke-linecap="sharp" stroke-linejoin="sharp" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+			</svg>
+		  </button>
+		</div>
+	  </div> 
+
+	</body>
+  
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+{% endblock %}
+
+
+	<!-- APP BAR / HEADER  -->
+	<nav class="bg-gray-800">
+		<div class="mx-6 max-w-auto px-2">
+		  <div class="relative flex h-16 items-center justify-between">
+
+				<!-- LOGO -->
+				<div class=" flex-shrink-0 items-center">
+					<a class="hidden w-auto lg:block text-4xl text-left text-white" href="/">SKANSKA</a>
+				  	<a class="block w-auto lg:hidden text-2xl text-left text-white" href="/">SKANSKA</a>
+				</div>
+			
+		
+
+
+				<!-- MOBILE MENU BUTTON -->
+				<div class=" sm:hidden">
+					<button type="button" class=" inline-flex items-center justify-center rounded-md p-2 text-white  hover:text-blue-500 focus:text-black focus:bg-white" aria-controls="mobile-menu" aria-expanded="false">
+					
+						<span class="sr-only">Open main menu</span>
+						<!--
+							Icon when menu is closed.
+				
+							Heroicon name: outline/bars-3
+				
+							Menu open: "hidden", Menu closed: "block"
+						-->
+						<svg class="block h-10 w-10 stroke-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="sharp" stroke-linejoin="sharp" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+						</svg>
+
+						<!--
+							Icon when menu is open.
+				
+							Heroicon name: outline/x-mark
+				
+							Menu open: "block", Menu closed: "hidden"
+						-->
+						<svg class="hidden h-10 w-10 stroke-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="sharp" stroke-linejoin="sharp" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+						
+					</button>
+				</div>
+				
+				<!-- HEADER MENU -->
+				<div class="hidden sm:block">
+					<div class=" flex space-x-4 items-center ">
+					<a class=" text-white hover:text-gray-200 px-3 py-2 text-sm font-medium" href="http://skanska_copy/prosjekter">Boligprosjekter </a>
+					<a class=" text-white hover:text-gray-200 px-3 py-2 text-sm font-medium" href="http://skanska_copy/gronne-boliger">Grønne boliger </a>
+					<a class=" text-white hover:text-gray-200 px-3 py-2 text-sm font-medium" href="http://skanska_copy/nyheter">Aktuelt </a>
+					<a class=" text-white hover:text-gray-200 px-3 py-2 text-sm font-medium" href="http://skanska_copy/tomter-kjopes">Tomter kjøpes </a>
+					<a class=" text-white hover:text-gray-200 px-3 py-2 text-sm font-medium" href="http://skanska_copy/om-skanska">Om oss </a>
+					</div>
+				</div>
+
+		</div>
+	</div>
+		
+		<!-- Mobile menu, show/hide based on menu state. -->
+		<!-- <div class="sm:hidden" id="mobile-menu">
+			<div class="space-y-1 px-2 pt-2 pb-3">
+			  <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+		
+			  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+		
+			  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+		
+			  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+			</div>
+		  </div> -->
+	</nav>
+
+
+
+
+
+<!-- PROFILE MENY ICONS -->
+<!-- <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"> -->
+				<!-- Heroicon name: outline/bell -->
+			  <!-- <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+				<span class="sr-only">View notifications</span>
+				
+				<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+				  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+				</svg>
+			  </button> -->
+	  
+			  <!-- Profile dropdown -->
+			  <!-- <div class="relative ml-3">
+				<div>
+				  <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+					<span class="sr-only">Open user menu</span>
+					<img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+				  </button>
+				</div> -->
+	  
+				<!--
+				  Dropdown menu, show/hide based on menu state.
+	  
+				  Entering: "transition ease-out duration-100"
+					From: "transform opacity-0 scale-95"
+					To: "transform opacity-100 scale-100"
+				  Leaving: "transition ease-in duration-75"
+					From: "transform opacity-100 scale-100"
+					To: "transform opacity-0 scale-95"
+				-->
+				<!-- Active: "bg-gray-100", Not Active: "" -->
+			
+				<!-- <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+					<a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+					<a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+					<a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+				  </div>
+			  </div> -->
+
+
+			<!-- </div> -->
+
+
+<!-- Mobile menu button-->
+	<div class="bg-red-400 absolute inset-y-0 left-0 flex items-center sm:hidden">
+		<button type="button" class=" inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+		<!-- <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"> -->
+			<span class="sr-only">Open main menu</span>
+			<!--
+			Icon when menu is closed.
+
+			Heroicon name: outline/bars-3
+
+			Menu open: "hidden", Menu closed: "block"
+			-->
+			<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+			</svg>
+
+			<!--
+			Icon when menu is open.
+
+			Heroicon name: outline/x-mark
+
+			Menu open: "block", Menu closed: "hidden"
+			-->
+			<svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+			</svg>
+		</button>
+	</div>
+
