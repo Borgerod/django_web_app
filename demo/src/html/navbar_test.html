@@ -8,22 +8,23 @@
     "
   >
 
-  
+  <!-- ORIGINAL NAVBAR (messy) -->
   <header>
-     <nav
-        class="
-          flex flex-wrap
-          items-center
-          justify-between
-          w-full
-          py-4
-          md:py-0
-          px-4
-          text-lg text-gray-700
-          bg-white
-        "
-      >
-        <!--    LOGO     -->
+    <nav
+    class="
+    flex flex-wrap
+    items-center
+    justify-between
+    w-full
+    py-4
+    md:py-0
+    px-4
+    text-lg text-gray-700
+    bg-white
+    "
+    >
+    
+    <!--    LOGO     -->
         <div>
           <a href="#">
             <svg
@@ -155,10 +156,16 @@
   </header>
 </body>
 
+
+<!-- ALTERNATIVE VERSION OF NAVBAR (cleaner) -->
 <nav class="container flex justify-between px-4 py-8 mx-auto bg-white">
+    
+  <!-- LOGO -->
     <div>
       <h3 class="text-2xl font-medium text-blue-500">LOGO</h3>
     </div>
+
+    <!-- BIG SCREEN MENU -->
     <div class="hidden space-x-8 lg:flex">
       <a href="#"> Boligprosjekter </a>
       <a href="#"> Grønne boliger </a>
@@ -166,6 +173,8 @@
       <a href="#"> Tomter kjøpes </a>
       <a href="#"> Om oss </a>
     </div>
+    
+    <!-- SMALL SCREEN (BURGER) MENU -->
     <div class="flex lg:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -182,6 +191,7 @@
         />
       </svg>
     </div>
+
   </nav>
 
 
