@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.radial-blue {
+    background: radial-gradient(lightyellow, skyblue)
+}
+
+.radial-red {
+    background: radial-gradient(lightyellow, red)
+}
+
+.background {
+    @apply relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12;
+  }
+
+/* .background-image {
+
+    @apply bg-[url(https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?w=2000
+    ),_url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXd2b3E8HCiKm3JmVV8UP5_zTlJUo1QX6eg&usqp=CAU)];
+}  */
